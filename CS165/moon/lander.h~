@@ -1,0 +1,73 @@
+/***********************************************************************
+ * Header File:
+ *    GROUND : A class representing the lunar landscape
+ * Author:
+ *    Br. Helfrich
+ * Summary:
+ *    Everything you needed to know about the ground but were afraid to ask
+ ************************************************************************/
+
+#ifndef LANDER_H
+#define LANDER_H
+
+#include <iostream>
+using namespace std;
+
+#include "point.h"
+#include "velocity.h"
+
+/**********************************************************************
+ * Add text here to describe what the function "main" does. Also don't forget
+ * to fill this out with meaningful text or YOU WILL LOSE POINTS.
+ ***********************************************************************/
+
+class Lander
+{
+    private:
+
+    Point point;
+    Velocity velocity;
+    bool alive;
+    bool landed;
+    int fuel;
+    bool thrust;
+
+
+    public:
+
+    Lander()
+    {
+        position = Point();
+        velocity = Velocity();
+    }
+
+    // Getters
+
+    Point getPoint() const { return point;}
+    Velocity getVelocity() const {return velocity;}
+    bool isAlive() {return alive;}
+    bool isLanded() {return landed;}
+    int getFuel() { return fuel;}
+    bool canThrust() {return thrust;}
+
+
+    // Setters
+
+    void setLanded(bool land);
+    void setAlive(bool lives);
+    void setFuel(int  fuel);
+
+
+    // Methods 
+
+    void applyGravity(float  gravity);
+    void applyThrustLeft();
+    void applyThrustRight();
+    void applyThrustBottom();
+
+    void advance();
+    void draw();
+
+};
+
+#endif

@@ -1,0 +1,68 @@
+/***********************************************************************
+ * Implementation File:
+ *    GROUND : A class representing the lunar landscape
+ * Author:
+ *    Br. Helfrich
+ * Summary:
+ *    Everything you needed to know about the ground but were afraid to ask
+ ************************************************************************/
+
+#include <iostream>
+using namespace std;
+
+#include "lander.h"
+#include "velocity.h"
+#include "point.h"
+
+/**********************************************************************
+ * Add text here to describe what the function "main" does. Also don't forget
+ * to fill this out with meaningful text or YOU WILL LOSE POINTS.
+ ***********************************************************************/
+
+
+void Lander :: setLanded(bool land)
+{
+    
+}
+
+void Lander :: setAlive(bool lives)
+{
+    
+}
+
+void Lander :: setFuel(int  fuel)
+{
+    
+}
+
+
+void Lander :: applyGravity(float  gravity)
+{
+    
+}
+
+void Lander :: applyThrustLeft()
+{
+    
+}
+
+void Lander :: applyThrustRight()
+{
+    
+}
+
+void Lander :: applyThrustBottom()
+{
+   
+}
+
+
+void Lander :: advance()
+{
+    
+}
+
+void Lander :: draw()
+{
+   drawLander(point);
+}
